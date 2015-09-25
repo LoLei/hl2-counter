@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><!--by LL--><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Days since Half Life 2: Episode 2</title>
+	<!--<link rel='stylesheet' href='style.css'/>-->
+	<!--<script src='script.js'></script>-->
+	<style media="screen" type="text/css">
+	    #text {
+        font-family: "Arial", sans-serif;
+        font-size: 27px;
+        margin-top: 75px;
+        text-align: center;
+        }
+        #image {
+        margin-top: 30px;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        <a href="http://i.imgur.com/zoLv93c.jpg"><img src="images/lambda_logo.svg"></a>
+    </div>
+    <div id="text">
+        <script type="text/javascript">
+            //Set the two dates
+            var ep2=new Date(2007, 9, 10); //Y/M/D, Month is 0-11
+            today=new Date();
+            //Get 1 day in milliseconds
+            var one_day=1000*60*60*24;
+
+            //Calculate difference in milliseconds btw the two dates, and convert to days
+            document.write(Math.ceil((today.getTime()-ep2.getTime())/(one_day))+
+            " days since Half Life 2: Episode 2");
+            document.write("<p>");
+            var time=Math.ceil((today.getTime()-ep2.getTime())/(one_day))
+			//document.write(years)
+			function calc(x) {
+				var y = 365;
+				var y2 = 31;
+				var remainder = x % y;
+				var casio = remainder % y2;
+				year = (x - remainder) / y;
+				month = (remainder - casio) / y2;
+
+				var result ="Or " + year + " years, " + month + " months and " + casio + " days";
+
+				return result;
+			}
+
+			var call = calc(time);
+			document.write(call);
+			//$('#data').html(call);
+            //Thanks to http://www.javascriptkit.com/javatutors/datedifference.shtml for the explanation
+        </script>2908 days since Half Life 2: Episode 2<p>Or 7 years, 11 months and 12 days
+    </p></div>
+
+</body></html>
